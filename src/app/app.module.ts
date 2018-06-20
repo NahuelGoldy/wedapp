@@ -15,8 +15,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { HomeModule } from './home/home.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { WallComponent } from './wall/wall.component';
-import { GalleryComponent } from './gallery/gallery.component';
+import {GalleryModule} from './gallery/gallery.module';
+import {WallModule} from './wall/wall.module';
 
 @NgModule({
   declarations: [
@@ -25,9 +25,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     LandingComponent,
     ProfileComponent,
     NavbarComponent,
-    FooterComponent,
-    WallComponent,
-    GalleryComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +34,9 @@ import { GalleryComponent } from './gallery/gallery.component';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    WallModule,
+    GalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

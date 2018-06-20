@@ -8,14 +8,18 @@ import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
+import {WallComponent} from './wall/wall.component';
+import {GalleryComponent} from './gallery/gallery.component';
 
 const routes: Routes = [
-    { path: 'home',          component: LandingComponent },
-    { path: 'template',             component: HomeComponent },
-    { path: 'user-profile',     component: ProfileComponent },
-    { path: 'signup',           component: SignupComponent },
-    { path: 'nucleoicons',      component: NucleoiconsComponent },
-    { path: '', redirectTo: 'home', pathMatch: 'full' }
+    { path: 'home',         component: LandingComponent },
+    { path: 'info',         component: HomeComponent },
+    { path: 'wall',         component: WallComponent },
+    { path: 'gallery',      component: GalleryComponent },
+    { path: 'user-profile', component: ProfileComponent },
+    { path: 'signup',       component: SignupComponent },
+    { path: 'nucleoicons',  component: NucleoiconsComponent },
+    { path: '**',           redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
