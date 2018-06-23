@@ -15,11 +15,16 @@ export class InformationComponent implements OnInit {
 
   ngOnInit() {
     const mapProp = {
-      center: new google.maps.LatLng(18.5793, 73.8143),
+      center: new google.maps.LatLng(-31.9725349, -60.9227361),
       zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+
+    new google.maps.Marker({
+      position: new google.maps.LatLng(-31.9725349, -60.9227361),
+      map: this.map
+    });
   }
 
 }
