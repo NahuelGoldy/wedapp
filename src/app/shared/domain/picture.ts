@@ -1,6 +1,7 @@
-export class Post {
+export class Picture {
+    _id: string;
     path: string;
     likesCount: number;
     isPublic: boolean;
-    createdDate: string;
+    createdAt: string;
 }
