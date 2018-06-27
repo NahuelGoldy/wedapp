@@ -25,4 +25,17 @@ export class WallComponent implements OnInit {
     });
   }
 
+  public createPost() {
+
+    // TODO delete this mock lines
+    const post = new Post();
+    post.message = 'ESte es un mensaje del mas alla!';
+    post.isPublic = false;
+    post.author = 'Post desde Angular6';
+
+    this.apiService.createPost(post).subscribe((createdPost) => {
+      console.log(createdPost);
+    });
+  }
+
 }
