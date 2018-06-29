@@ -23,4 +23,8 @@ export  class  APIService {
     createPost(body) {
         return  this.httpClient.post(`${this.API_URL}/posts`, body);
     }
+
+    createPic(formData) {
+        return this.httpClient.post(`${this.API_URL}/pics`, formData);
+    }
 }
