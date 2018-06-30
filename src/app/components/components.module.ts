@@ -4,6 +4,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { NouisliderModule } from 'ng2-nouislider';
 import { JWBootstrapSwitchModule } from 'jw-bootstrap-switch-ng2';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 import { BasicelementsComponent } from './basicelements/basicelements.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -21,7 +23,9 @@ import { InformationComponent } from './information/information.component';
         FormsModule,
         NgbModule,
         NouisliderModule,
-        JWBootstrapSwitchModule
+        JWBootstrapSwitchModule,
+        MatCardModule,
+        MatButtonModule
     ],
     declarations: [
         ComponentsComponent,

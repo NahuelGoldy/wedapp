@@ -1,52 +1,60 @@
-
 <section>
-    <div class="container-fluid">
-        <div id="what" class="card mb-12">
-            <div class="card-header custom-card-header-main">
-                <h2>
-                    Nuestra boda
-                </h2>
-            </div>
-            <div class="card-block">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-        </div>
-    </div>
+    <mat-card id="what">
+        <mat-card-header>
+            <img mat-card-avatar src="https://www.basikmoney.com/wp-content/uploads/2017/11/wedding-loan-02.png">
+            <mat-card-title>Nuestra boda</mat-card-title>
+            <mat-card-subtitle>Gise & Nahuel se casan!</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://cdn10.phillymag.com/wp-content/uploads/sites/3/2017/08/minimalist-modern-JG-Domestic-city-Wedding-Philadelphia-11.jpg">
+        <mat-card-content>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+        </mat-card-actions>
+    </mat-card>
 </section>
 
 <section>
-    <div class="container-fluid">
-        <div id="when" class="card mb-12">
-            <div class="card-header custom-card-header-main">
-                <h2>
-                    Cuándo  <i class="nc-icon nc-calendar-60"></i>
-                </h2>
-            </div>
-            <div class="card-block">
-                <h4>
-                    06 / Abril / 2018  -  21:00 hs
-                </h4>
-                <br>
-                <p>
-                    (aca iria la cuenta regresiva)
-                </p>
-            </div>
-        </div>
-    </div>
+    <mat-card id="when">
+        <mat-card-header>
+            <img mat-card-avatar src="https://www.heartlandschools.org/vimages/shared/vnews/stories/58caacec2407b/1_calendar-icon.png">
+            <mat-card-title>Cuándo</mat-card-title>
+            <mat-card-subtitle>06 / Abril / 2018  -  21:00 hs</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <h3>
+                Faltan DDD días, HH horas, MM minutos y SS segundos
+            </h3>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+        </mat-card-actions>
+    </mat-card>
 </section>
 
 <section>
-    <div class="container-fluid">
-        <div id="where" class="card mb-12">
-            <div class="card-header custom-card-header-main">
-                <h2>
-                    Dónde  <i class="nc-icon nc-map-big"></i>
-                </h2>
+    <mat-card id="where">
+        <mat-card-header>
+            <img mat-card-avatar src="https://cdn3.iconfinder.com/data/icons/circles/512/flat_8-512.png">
+            <mat-card-title>Dónde</mat-card-title>
+            <mat-card-subtitle>
+                Mutual Central Coronda, Salon Dorado. 25 de Mayo 1650, Coronda, SF, Argentina.
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <div #gmap style="width:100%;height:400px;">
             </div>
-            <div class="card-block" #gmap style="width:100%;height:400px;">
-            </div>
-        </div>
-    </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+        </mat-card-actions>
+    </mat-card>
 </section>
