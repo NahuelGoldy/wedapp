@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { WallComponent } from './wall.component';
+import { PicsUploadComponent } from './pics-upload.component';
 
 @NgModule({
     imports: [
@@ -16,8 +16,8 @@ import { WallComponent } from './wall.component';
         MatCardModule,
         MatButtonModule
     ],
-    declarations: [ WallComponent ],
-    exports: [ WallComponent ],
+    declarations: [ PicsUploadComponent ],
+    exports: [ PicsUploadComponent ],
     providers: []
 })
-export class WallModule { }
+export class PicsUploadModule { }

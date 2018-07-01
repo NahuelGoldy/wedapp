@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { GalleryComponent } from './gallery.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatButtonModule, MatGridListModule, MatIconModule } from '@angular/material';
 
 @NgModule({
     imports: [
@@ -13,8 +13,10 @@ import {MatTabsModule} from '@angular/material/tabs';
         BrowserModule,
         FormsModule,
         NgbModule,
-        MatTabsModule,
-        RouterModule
+        RouterModule,
+        MatButtonModule,
+        MatGridListModule,
+        MatIconModule
     ],
     declarations: [ GalleryComponent ],
     exports: [GalleryComponent ],

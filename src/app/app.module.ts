@@ -17,6 +17,7 @@ import { HomeModule } from './home/home.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {GalleryModule} from './gallery/gallery.module';
 import {WallModule} from './wall/wall.module';
+import {PicsUploadModule} from './pics-upload/pics-upload.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {WallModule} from './wall/wall.module';
     HttpClientModule,
     HomeModule,
     WallModule,
-    GalleryModule
+    GalleryModule,
+    PicsUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]

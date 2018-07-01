@@ -11,36 +11,38 @@ import {Picture} from '../shared/domain/picture';
 })
 export class GalleryComponent implements OnInit {
 
+  currentPage: number;
   pics: Picture[] = [];
-  selectedFile: File = null;
+  serverURL: string;
 
-  constructor(private apiService: APIService) {  }
+  constructor(private apiService: APIService) {
+    this.currentPage = 0;
+    this.serverURL = apiService.API_URL;
+    this.getPics();
+  }
 
   ngOnInit() {
   }
 
-  onFileSelected(event) {
-    this.selectedFile = <File> event.target.files[0];
-  }
-
-  onUpload() {
-    const fd = new FormData();
-    fd.append('image', this.selectedFile);
-    fd.append('isPublic', 'true'); // TODO refactor (hardcoded)
-    this.createPic(fd);
-  }
-
   public getPics() {
-    this.apiService.getPics().subscribe((data:  Array<Picture>) => {
-      this.pics  =  data;
-      console.log(data);
+    this.currentPage++;
+    this.apiService.getPicsPaginated(this.currentPage).subscribe((data:  Picture[]) => {
+      this.pics.push(...data);
+      this.pics.forEach(pic => {
+        pic.path = pic.path.replace('\\', '/');
+      });
     });
   }
 
-  public createPic(fd) {
-    this.apiService.createPic(fd).subscribe(res => {
-      console.log(res);
+  public likePic(id) {
+    this.apiService.likePic(id).subscribe((res: Picture) => {
+      (this.pics.find(pic => pic._id = id)).likesCount = res.likesCount;
     });
+  }
+
+  like() {
+    // TODO delete
+    this.likePic(this.pics[0]._id);
   }
 
 }

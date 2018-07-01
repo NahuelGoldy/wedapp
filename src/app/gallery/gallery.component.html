@@ -1,28 +1,41 @@
 <div class="wrapper" [@routerTransition]>
-    <div class="page-header section-dark" style="background-image: url('assets/img/wed4.jpg')">
+    <div class="section-dark"> <!--style="background-image: url('assets/img/wed4.jpg')"-->>
       <div class="filter"></div>
       <div class="content-center">
         <div class="container">
           <div class="title-brand">
-            <h1 class="presentation-title">Gise & Nahuel</h1>
+            <h1>Galeria</h1>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-12">
-      <mat-tab-group headerPosition="below" mat-stretch-tabs>
-        <mat-tab >
-          <ng-template mat-tab-label>
-            <i class="fa fa-image"></i>
-          </ng-template>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </mat-tab>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <i class="fa fa-camera"></i>
-          </ng-template>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </mat-tab>
-      </mat-tab-group>
+
+    <div class="btns col-md-12">
+        <button mat-raised-button color="primary" (click)="like()">LIKE</button>
+        <button type="button" class="btn btn-danger btn-round" [routerLink]="['/upload']"><i class="fa fa-plus-circle"></i> Subir fotos</button>
     </div>
+
+    <div class="col-md-12">
+        <mat-grid-list cols="3" rowHeight="4:3">
+
+            <mat-grid-tile *ngFor="let pic of pics">
+                <img mat-card-image src="{{serverURL + pic.path}}">
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <img mat-card-image src="https://cdn10.phillymag.com/wp-content/uploads/sites/3/2017/08/minimalist-modern-JG-Domestic-city-Wedding-Philadelphia-11.jpg">
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img mat-card-image src="https://i.pinimg.com/736x/cd/90/d9/cd90d9de63fa2c8e5c5e7117e27b5c18--gritty-portrait-photography-studio-photography.jpg">
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img mat-card-image src="https://cdn10.phillymag.com/wp-content/uploads/sites/3/2017/08/minimalist-modern-JG-Domestic-city-Wedding-Philadelphia-11.jpg">
+            </mat-grid-tile>
+
+        </mat-grid-list>
+    </div>
+
+    <button mat-fab>
+        <mat-icon aria-label="Example icon-button with a heart icon" [routerLink]="['/upload']">add</mat-icon>
+    </button>
 </div>

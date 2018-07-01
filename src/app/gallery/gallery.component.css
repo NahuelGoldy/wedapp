@@ -1,6 +1,25 @@
 
-.fa {
+.section-dark {
+    padding-top: 5% !important;
+}
+
+/*mat-grid-tile {*/
+    /*background: lightblue;*/
+/*}*/
+
+.btn-round {
+    font-size: 1.25rem !important;
+}
+
+.btn-round i {
     font-size: 1.5rem !important;
-    font-weight: 900 !important;
-    color: blue !important;
+}
+
+.btns {
+    margin: 5% 0;
+}
+
+img {
+    max-width: 200%;
+    max-height: 200%;
 }
