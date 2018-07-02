@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { GalleryComponent } from './gallery.component';
-import {MatBadgeModule, MatButtonModule, MatDialogModule, MatGridListModule, MatIconModule} from '@angular/material';
-import {CarouselComponent} from './carousel/carousel.component';
+import { MatBadgeModule, MatButtonModule, MatDialogModule, MatGridListModule, MatIconModule, MatProgressSpinnerModule} from '@angular/material';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
     imports: [
@@ -19,7 +19,8 @@ import {CarouselComponent} from './carousel/carousel.component';
         MatGridListModule,
         MatIconModule,
         MatBadgeModule,
-        MatDialogModule
+        MatDialogModule,
+        MatProgressSpinnerModule
     ],
     declarations: [
         GalleryComponent,

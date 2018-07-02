@@ -3,9 +3,9 @@
     padding-top: 5% !important;
 }
 
-/*mat-grid-tile {*/
-    /*background: lightblue;*/
-/*}*/
+mat-grid-tile {
+    background: lightblue;
+}
 
 .btn-round {
     font-size: 1.25rem !important;
@@ -32,4 +32,13 @@ a img {
     top: -25%;
     position: relative;
     transform: translateX(-50%);
+}
+
+.container {
+    padding: 3% 0;
+    text-align: center;
+}
+
+mat-spinner {
+    margin: 0 auto 3% auto;
 }

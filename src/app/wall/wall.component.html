@@ -34,4 +34,13 @@
       </mat-card-actions>
     </mat-card>
   </section>
+
+  <div class="container">
+      <button type="button" *ngIf="!showSpinner" class="btn btn-outline-info btn-lg" (click)="getPosts()">Cargar más publicaciones</button>
+  </div>
+
+  <div class="container">
+      <mat-spinner *ngIf="showSpinner" color="accent" diameter="25"></mat-spinner>
+  </div>
+
 </div>
