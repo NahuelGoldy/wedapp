@@ -12,6 +12,7 @@ import {Post} from '../shared/domain/post';
 export class WallComponent implements OnInit {
 
   currentPage: number;
+  showSpinner: boolean;
   posts: Post[] = [];
   avatars: string[] = [
       'https://image.flaticon.com/icons/svg/206/206853.svg',
@@ -37,10 +38,12 @@ export class WallComponent implements OnInit {
   }
 
   public getPosts() {
+    this.showSpinner = true;
     this.currentPage++;
     this.apiService.getPostsPaginated(this.currentPage).subscribe((data:  Post[]) => {
       this.posts.push(...data);
       this.setMockRandomAvatars();
+      this.showSpinner = false;
     });
   }
 

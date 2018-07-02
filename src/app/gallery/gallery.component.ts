@@ -14,6 +14,7 @@ import {CarouselComponent} from './carousel/carousel.component';
 export class GalleryComponent implements OnInit {
 
   currentPage: number;
+  showSpinner: boolean;
   pics: Picture[] = [];
   serverURL: string;
 
@@ -36,10 +37,12 @@ export class GalleryComponent implements OnInit {
   }
 
   public getPics() {
+    this.showSpinner = true;
     this.currentPage++;
     this.apiService.getPicsPaginated(this.currentPage).subscribe((data:  Picture[]) => {
       this.pics.push(...data);
       this.pics.forEach(pic => {
+        this.showSpinner = false;
         pic.path = pic.path.replace('\\', '/');
       });
     });

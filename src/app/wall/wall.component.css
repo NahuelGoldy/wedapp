@@ -23,3 +23,12 @@ mat-card-content p {
     -moz-hyphens: auto;
     hyphens: auto;
 }
+
+.container {
+    padding: 3% 0;
+    text-align: center;
+}
+
+mat-spinner {
+    margin: 0 auto 3% auto;
+}

@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { WallComponent } from './wall.component';
+import { MatProgressSpinnerModule } from '@angular/material';
 
 @NgModule({
     imports: [
@@ -14,7 +15,8 @@ import { WallComponent } from './wall.component';
         FormsModule,
         RouterModule,
         MatCardModule,
-        MatButtonModule
+        MatButtonModule,
+        MatProgressSpinnerModule
     ],
     declarations: [ WallComponent ],
     exports: [ WallComponent ],
