@@ -5,7 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { GalleryComponent } from './gallery.component';
-import { MatButtonModule, MatGridListModule, MatIconModule } from '@angular/material';
+import {MatBadgeModule, MatButtonModule, MatDialogModule, MatGridListModule, MatIconModule} from '@angular/material';
+import {CarouselComponent} from './carousel/carousel.component';
 
 @NgModule({
     imports: [
@@ -16,10 +17,15 @@ import { MatButtonModule, MatGridListModule, MatIconModule } from '@angular/mate
         RouterModule,
         MatButtonModule,
         MatGridListModule,
-        MatIconModule
+        MatIconModule,
+        MatBadgeModule,
+        MatDialogModule
     ],
-    declarations: [ GalleryComponent ],
-    exports: [GalleryComponent ],
+    declarations: [
+        GalleryComponent,
+        CarouselComponent
+    ],
+    exports: [GalleryComponent],
     providers: []
 })
 export class GalleryModule { }

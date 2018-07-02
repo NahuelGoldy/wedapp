@@ -4,13 +4,11 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
-import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 import { WallComponent } from './wall/wall.component';
 import { GalleryComponent } from './gallery/gallery.component';
-import {PicsUploadComponent} from './pics-upload/pics-upload.component';
+import { PicsUploadComponent } from './pics-upload/pics-upload.component';
 
 const routes: Routes = [
     { path: 'home',         component: LandingComponent },
@@ -18,8 +16,6 @@ const routes: Routes = [
     { path: 'wall',         component: WallComponent },
     { path: 'gallery',      component: GalleryComponent },
     { path: 'upload',       component: PicsUploadComponent },
-    { path: 'user-profile', component: ProfileComponent },
-    { path: 'signup',       component: SignupComponent },
     { path: 'nucleoicons',  component: NucleoiconsComponent },
     { path: '**',           redirectTo: 'home', pathMatch: 'full' }
 ];

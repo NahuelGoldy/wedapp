@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {routerTransition} from '../router.animations';
 import {APIService} from '../shared/services/api.service';
 import {Picture} from '../shared/domain/picture';
+import {MatDialog, MatDialogConfig} from '@angular/material';
+import {CarouselComponent} from './carousel/carousel.component';
 
 @Component({
   selector: 'app-gallery',
@@ -15,13 +17,22 @@ export class GalleryComponent implements OnInit {
   pics: Picture[] = [];
   serverURL: string;
 
-  constructor(private apiService: APIService) {
+  constructor(private apiService: APIService, private dialog: MatDialog) {
     this.currentPage = 0;
     this.serverURL = apiService.API_URL;
     this.getPics();
   }
 
   ngOnInit() {
+  }
+
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.autoFocus = true;
+    dialogConfig.hasBackdrop = true;
+
+    this.dialog.open(CarouselComponent, dialogConfig);
   }
 
   public getPics() {

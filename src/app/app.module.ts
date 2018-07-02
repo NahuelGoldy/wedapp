@@ -7,24 +7,21 @@ import { AppRoutingModule } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
-import { ProfileComponent } from './profile/profile.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 import { HomeModule } from './home/home.module';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {GalleryModule} from './gallery/gallery.module';
-import {WallModule} from './wall/wall.module';
-import {PicsUploadModule} from './pics-upload/pics-upload.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GalleryModule } from './gallery/gallery.module';
+import { WallModule } from './wall/wall.module';
+import { PicsUploadModule } from './pics-upload/pics-upload.module';
+import {CarouselComponent} from './gallery/carousel/carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
     LandingComponent,
-    ProfileComponent,
     NavbarComponent,
     FooterComponent
   ],
@@ -42,6 +39,7 @@ import {PicsUploadModule} from './pics-upload/pics-upload.module';
     PicsUploadModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CarouselComponent]
 })
 export class AppModule { }

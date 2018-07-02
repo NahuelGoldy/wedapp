@@ -19,7 +19,17 @@
     margin: 5% 0;
 }
 
-img {
+a {
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+}
+
+a img {
     max-width: 200%;
     max-height: 200%;
+    left: 50%;
+    top: -25%;
+    position: relative;
+    transform: translateX(-50%);
 }
