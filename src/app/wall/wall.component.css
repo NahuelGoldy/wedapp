@@ -7,7 +7,7 @@ section {
     margin: 5% 0;
 }
 
-.mat-card-avatar {
+.mat-card-avatar, .profile-content {
     background-color: #6b2a2a !important;
 }
 
@@ -31,4 +31,12 @@ mat-card-content p {
 
 mat-spinner {
     margin: 0 auto 3% auto;
+}
+
+.new-post-form {
+    width: 100%;
+}
+
+.new-post-full-width {
+    width: 100%;
 }

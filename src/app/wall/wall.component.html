@@ -16,6 +16,47 @@
     </div>
   </div>
 
+  <section>
+    <mat-card>
+
+      <mat-card-header>
+        <mat-card-title>Dejanos un mensaje!</mat-card-title>
+        <mat-card-subtitle>Un saludo, buenos deseos o lo que te nazca =)</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <form class="new-post-form">
+
+          <mat-form-field class="new-post-full-width" appearance="outline">
+            <mat-label>Autor</mat-label>
+            <input matInput type="text" name="author" [(ngModel)]="newPost.author">
+            <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="newPost.author = ''">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+
+          <mat-form-field class="new-post-full-width" appearance="outline">
+            <mat-label>Mensaje</mat-label>
+            <textarea matInput type="text" name="mensaje" [(ngModel)]="newPost.message"></textarea>
+            <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="newPost.message = ''">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+
+          Privado <mat-slide-toggle name="isPublic" [(ngModel)]="newPost.isPublic"> Público</mat-slide-toggle>
+
+        </form>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-button (click)="createPost(newPost)">PUBLICAR</button>
+      </mat-card-actions>
+
+    </mat-card>
+  </section>
+
+  <h6 style="margin-left: 5%"><br>Publicaciones</h6>
+
   <section *ngFor="let post of posts">
     <mat-card>
       <mat-card-header>
@@ -28,10 +69,6 @@
           {{post.message}}
         </p>
       </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
     </mat-card>
   </section>
 
