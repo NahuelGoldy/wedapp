@@ -43,8 +43,17 @@ mat-spinner {
 
 .mat-card-actions .mat-button {
     margin-left: 70% !important;
+    color: #6b2a2a !important;
 }
 
 textarea {
     height: 4rem;
+}
+
+.row {
+    margin-left: 2%;
+}
+
+.row i {
+    margin: 0.7% 2%;
 }

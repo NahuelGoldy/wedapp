@@ -28,7 +28,7 @@
         <form class="new-post-form">
 
           <mat-form-field class="new-post-full-width" appearance="outline">
-            <mat-label>Autor</mat-label>
+            <mat-label>Autor (opcional)</mat-label>
             <input matInput type="text" name="author" [(ngModel)]="newPost.author">
             <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="newPost.author = ''">
               <mat-icon>close</mat-icon>
@@ -43,7 +43,13 @@
             </button>
           </mat-form-field>
 
-          Privado <mat-slide-toggle name="isPublic" [(ngModel)]="newPost.isPublic"> Público</mat-slide-toggle>
+          <div class="row">
+            <p>Privado </p>
+            <i class="fa fa-lock"></i>
+            <mat-slide-toggle name="isPublic" [(ngModel)]="newPost.isPublic"></mat-slide-toggle>
+            <i class="fa fa-unlock"></i>
+            <p> Público</p>
+          </div>
 
         </form>
       </mat-card-content>
