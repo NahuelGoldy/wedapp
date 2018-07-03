@@ -40,3 +40,11 @@ mat-spinner {
 .new-post-full-width {
     width: 100%;
 }
+
+.mat-card-actions .mat-button {
+    margin-left: 70% !important;
+}
+
+textarea {
+    height: 4rem;
+}
