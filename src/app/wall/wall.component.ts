@@ -14,6 +14,7 @@ export class WallComponent implements OnInit {
   currentPage: number;
   showSpinner: boolean;
   posts: Post[] = [];
+  newPost: Post;
   avatars: string[] = [
       'https://image.flaticon.com/icons/svg/206/206853.svg',
       'https://image.flaticon.com/icons/svg/206/206891.svg',
@@ -31,6 +32,7 @@ export class WallComponent implements OnInit {
 
   constructor(private apiService: APIService) {
     this.currentPage = 0;
+    this.newPost = new Post();
     this.getPosts();
   }
 
@@ -55,17 +57,17 @@ export class WallComponent implements OnInit {
     });
   }
 
-  public createPost() {
-
-    // TODO delete this mock lines
-    const post = new Post();
-    post.message = 'ESte es un mensaje del mas alla!';
-    post.isPublic = false;
-    post.author = 'Post desde Angular6';
-
-    this.apiService.createPost(post).subscribe((createdPost) => {
-      console.log(createdPost);
+  public createPost(post) {
+    this.apiService.createPost(post).subscribe((createdPost: Post) => {
+        this.clearForm();
+        this.posts.unshift(createdPost);
+        this.setMockRandomAvatars();
+        console.log(createdPost);
     });
+  }
+
+  private clearForm() {
+      this.newPost = new Post();
   }
 
 }
