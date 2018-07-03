@@ -19,7 +19,7 @@
         <mat-grid-list cols="3" rowHeight="4:3">
 
             <mat-grid-tile *ngFor="let pic of pics">
-                <a>
+                <a (click)="openDialog(pic)">
                     <img mat-card-image src="{{serverURL + pic.path}}">
                 </a>
             </mat-grid-tile>
@@ -43,7 +43,7 @@
         </mat-grid-list>
     </div>
 
-    <button mat-fab (click)="openDialog()">
+    <button mat-fab>
         <mat-icon aria-label="Example icon-button with a heart icon" >add</mat-icon>
     </button>
 

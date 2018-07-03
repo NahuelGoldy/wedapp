@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA} from '@angular/material';
+import {Picture} from '../../shared/domain/picture';
 
 @Component({
   selector: 'app-carousel',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
 
-  constructor() { }
+  pics: Picture[] = [];
+  currentActive: number;
+  serverURL: string;
+
+  constructor(@Inject(MAT_DIALOG_DATA) data) {
+    this.pics = data.pics;
+    this.currentActive = data.activeId;
+    this.serverURL = data.serverURL;
+  }
 
   ngOnInit() {
   }

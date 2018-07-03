@@ -27,11 +27,17 @@ export class GalleryComponent implements OnInit {
   ngOnInit() {
   }
 
-  openDialog() {
+  openDialog(pic) {
     const dialogConfig = new MatDialogConfig();
+    const index = this.pics.indexOf(pic);
 
     dialogConfig.autoFocus = true;
     dialogConfig.hasBackdrop = true;
+    dialogConfig.data = {
+      activeId: index,
+      pics: this.pics,
+      serverURL: this.serverURL
+    };
 
     this.dialog.open(CarouselComponent, dialogConfig);
   }
