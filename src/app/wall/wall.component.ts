@@ -49,7 +49,9 @@ export class WallComponent implements OnInit {
 
   private setMockRandomAvatars() {
     this.posts.forEach(p => {
-      p.avatarURL = this.avatars[(Math.round(Math.random() * this.avatars.length))];
+        if (p.avatarURL == null) {
+            p.avatarURL = this.avatars[(Math.round(Math.random() * this.avatars.length))];
+        }
     });
   }
 
