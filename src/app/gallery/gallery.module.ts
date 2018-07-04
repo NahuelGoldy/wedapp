@@ -5,8 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { GalleryComponent } from './gallery.component';
-import { MatBadgeModule, MatButtonModule, MatDialogModule, MatGridListModule, MatIconModule, MatProgressSpinnerModule} from '@angular/material';
+import {
+    MatBadgeModule, MatButtonModule, MatCardModule, MatDialogModule, MatGridListModule, MatIconModule,
+    MatProgressSpinnerModule
+} from '@angular/material';
 import { CarouselComponent } from './carousel/carousel.component';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 @NgModule({
     imports: [
@@ -20,11 +24,13 @@ import { CarouselComponent } from './carousel/carousel.component';
         MatIconModule,
         MatBadgeModule,
         MatDialogModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        MatCardModule
     ],
     declarations: [
         GalleryComponent,
-        CarouselComponent
+        CarouselComponent,
+        TimeAgoPipe
     ],
     exports: [GalleryComponent],
     providers: []

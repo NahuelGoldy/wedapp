@@ -38,7 +38,6 @@ export  class  APIService {
 
     likePic(id) {
         const body = {'_id': id};
-        console.log(body);
         return this.httpClient.post(`${this.API_URL}pics/like`, body);
     }
 }

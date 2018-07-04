@@ -33,13 +33,22 @@ export class GalleryComponent implements OnInit {
 
     dialogConfig.autoFocus = true;
     dialogConfig.hasBackdrop = true;
+    dialogConfig.closeOnNavigation = true;
     dialogConfig.data = {
       activeId: index,
       pics: this.pics,
       serverURL: this.serverURL
     };
+    dialogConfig.panelClass = 'custom-dialog-container';
+    dialogConfig.backdropClass = 'custom-cdk-overlay-dark-backdrop';
+    dialogConfig.maxHeight = '100vh';
+    dialogConfig.maxWidth = '100vw';
 
-    this.dialog.open(CarouselComponent, dialogConfig);
+    const dialogRef = this.dialog.open(CarouselComponent, dialogConfig);
+
+    dialogRef.afterClosed().subscribe(
+        data => this.pics = data
+    );
   }
 
   public getPics() {
@@ -52,17 +61,6 @@ export class GalleryComponent implements OnInit {
         pic.path = pic.path.replace('\\', '/');
       });
     });
-  }
-
-  public likePic(id) {
-    this.apiService.likePic(id).subscribe((res: Picture) => {
-      (this.pics.find(pic => pic._id = id)).likesCount = res.likesCount;
-    });
-  }
-
-  like() {
-    // TODO delete
-    this.likePic(this.pics[0]._id);
   }
 
 }
