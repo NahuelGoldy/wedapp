@@ -1,6 +1,6 @@
 .carousel-control-prev,
 .carousel-control-next{
-    background-color: $danger-color;
+    //background-color: $danger-color;
     border-radius: 50%;
     opacity: 1;
     text-shadow: none;
@@ -9,7 +9,7 @@
     &:hover,
     &:focus{
         opacity: 1;
-        background-color: $danger-states-color;
+        //background-color: $danger-states-color;
     }
 }
 .carousel-control-prev-icon{
@@ -41,14 +41,14 @@
     top: 48%;
     width: 30px;
     left: 20px;
-    opacity: 0;
+    //opacity: 0;
 }
 .carousel-control-next{
     height: 30px;
     right: 20px;
     top: 48%;
     width: 30px;
-    opacity: 0;
+    //opacity: 0;
 }
 .carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .fa, .carousel-control .fa {
     display: inline-block;
@@ -78,10 +78,19 @@
         img{
             border-radius: $border-radius-extreme;
             box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
-            height: 400px;
+            height: auto;
             width: 100%;
         }
     }
+}
+
+.custom-dialog-container .mat-dialog-container {
+    padding: 1% !important;
+    //border-radius: 3% !important;
+}
+
+.custom-cdk-overlay-dark-backdrop {
+    background: rgba(0,0,0,.8) !important;
 }
 
 .carousel-indicators{

@@ -1,10 +1,17 @@
 <mat-dialog-content>
-  <ngb-carousel>
-    <ng-template ngbSlide *ngFor="let pic of pics">
-      <img src="{{serverURL + pic.path}}" alt="Random first slide">
-      <div class="carousel-caption">
-        <p>Some caption</p>
-      </div>
-    </ng-template>
+  <ngb-carousel #picCarousel activeId="{{currentActive}}" interval="0" [showNavigationIndicators]="false" [showNavigationArrows]="true">
+      <ng-template ngbSlide *ngFor="let pic of pics; let i = index" id="{{i}}">
+          <div class="cust-row col-md-12">
+              <button type="button" class="btn {{likeBtnClass}} btn-link" (click)="likePic(pic)">
+                  <i class="nc-icon {{likeBtnIcon}}" style="font-size: 1.5rem;"></i>
+                  {{likeBtnText}}
+              </button>
+              <mat-icon matBadge="{{pic.likesCount}}" matBadgeColor="warn">favorite</mat-icon>
+              <p>{{pic.createdAt | timeAgo}}</p>
+          </div>
+          <div class="col-md-12">
+              <img src="{{serverURL + pic.path}}">
+          </div>
+      </ng-template>
   </ngb-carousel>
 </mat-dialog-content>

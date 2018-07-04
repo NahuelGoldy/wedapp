@@ -16,6 +16,7 @@ mat-grid-tile {
 }
 
 .btns {
+    text-align: center;
     margin: 5% 0;
 }
 
@@ -28,6 +29,8 @@ a {
 a img {
     max-width: 200%;
     max-height: 200%;
+    min-width: 100%;
+    min-height: 100%;
     left: 50%;
     top: -25%;
     position: relative;
