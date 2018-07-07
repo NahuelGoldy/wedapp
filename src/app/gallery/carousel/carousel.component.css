@@ -1,4 +1,5 @@
 .mat-icon {
+    color: white;
     display: inline-block !important;
     float: right !important;
     margin-top: 3%;
@@ -22,7 +23,6 @@ p {
 }
 
 .mat-icon .mat-badge {
-    color: white !important;
     font-size: 3rem !important;
     bottom: 1rem !important;
 }
@@ -36,4 +36,8 @@ p {
 
 .btn-default {
     color: white !important;
+}
+
+.btn-info {
+    color: #51bcda !important;
 }

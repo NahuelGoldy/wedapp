@@ -45,3 +45,11 @@ a img {
 mat-spinner {
     margin: 0 auto 3% auto;
 }
+
+.mat-card-image {
+    width: auto !important;
+    margin: 0 !important;
+}
+.mat-card-image:first-child {
+    margin: 0 !important;
+}
