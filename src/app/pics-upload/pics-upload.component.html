@@ -1,12 +1,16 @@
 <div class="wrapper" [@routerTransition]>
-  <div class="page-header section-dark" style="background-image: url('assets/img/wed4.jpg')">
+  <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('../assets/img/fabio-mangione.jpg');">
     <div class="filter"></div>
-    <div class="content-center">
-      <div class="container">
-        <div class="title-brand">
-          <h1 class="presentation-title">Subí tu foto!</h1>
+  </div>
+
+  <div class="profile-content">
+    <div class="container">
+      <div class="owner">
+        <div class="avatar">
+          <img src="../assets/img/faces/joe-gardner-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
         </div>
       </div>
+      <br/>
     </div>
   </div>
 
@@ -18,6 +22,10 @@
       #fileInput>
     <button mat-raised-button color="primary" (click)="fileInput.click()">Elegir foto</button>
     <button type="button" class="btn btn-danger btn-round" (click)="onUpload()"><i class="fa fa-plus-circle"></i> Subir!</button>
+  </div>
+
+  <div *ngFor="let file of selectedFiles">
+    <p>{{file.name}}</p>
   </div>
 
 </div>
