@@ -12,6 +12,7 @@ import { Picture } from '../shared/domain/picture';
 export class PicsUploadComponent implements OnInit {
 
   selectedFile: File = null;
+  selectedFiles: File[] = [];
 
   constructor(private apiService: APIService) { }
 
@@ -20,13 +21,18 @@ export class PicsUploadComponent implements OnInit {
 
   onFileSelected(event) {
     this.selectedFile = <File> event.target.files[0];
+    this.selectedFiles.push(<File> event.target.files[0]);
   }
 
   onUpload() {
-    const fd = new FormData();
-    fd.append('image', this.selectedFile);
-    fd.append('isPublic', 'true'); // TODO refactor (hardcoded)
-    this.createPic(fd);
+    this.selectedFiles.forEach( each => {
+      const formdata = new FormData();
+      formdata.append('image', each);
+      this.createPic(formdata);
+    });
+    // const fd = new FormData();
+    // fd.append('image', this.selectedFile);
+    // this.createPic(fd);
   }
 
   public createPic(fd) {

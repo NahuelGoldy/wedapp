@@ -5,6 +5,7 @@
 }
 
 p {
+    color: white;
     display: inline-block !important;
     text-align: center;
     margin-left: 5vh;
@@ -21,7 +22,7 @@ p {
 }
 
 .mat-icon .mat-badge {
-    color: grey !important;
+    color: white !important;
     font-size: 3rem !important;
     bottom: 1rem !important;
 }
@@ -31,4 +32,8 @@ p {
     top: 0.8rem !important;
     background-color: transparent !important;
     font-size: 1rem !important;
+}
+
+.btn-default {
+    color: white !important;
 }

@@ -1,8 +1,8 @@
 <mat-dialog-content>
-  <ngb-carousel #picCarousel activeId="{{currentActive}}" interval="0" [showNavigationIndicators]="false" [showNavigationArrows]="true">
+  <ngb-carousel #picCarousel activeId="{{currentActive}}" interval="0" [overlap]="false" [showNavigationIndicators]="false" [showNavigationArrows]="true">
       <ng-template ngbSlide *ngFor="let pic of pics; let i = index" id="{{i}}">
           <div class="cust-row col-md-12">
-              <button type="button" class="btn {{likeBtnClass}} btn-link" (click)="likePic(pic)">
+              <button type="button" style="color: white" class="btn {{likeBtnClass}} btn-link" (click)="likePic(pic)">
                   <i class="nc-icon {{likeBtnIcon}}" style="font-size: 1.5rem;"></i>
                   {{likeBtnText}}
               </button>
