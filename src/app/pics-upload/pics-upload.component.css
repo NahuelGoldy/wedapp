@@ -1,0 +1,16 @@
+.progress-bar-container {
+    transform: translateY(50%) !important;
+}
+
+button {
+    width: 35vw;
+}
+
+.publish-all-btn {
+    width: 60vw !important;
+}
+
+.publish-all-div {
+    text-align: center;
+    margin-top: 5%;
+}
