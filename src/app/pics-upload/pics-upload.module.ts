@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { PicsUploadComponent } from './pics-upload.component';
+import { MatProgressBarModule } from '@angular/material';
 
 @NgModule({
     imports: [
@@ -14,7 +15,8 @@ import { PicsUploadComponent } from './pics-upload.component';
         FormsModule,
         RouterModule,
         MatCardModule,
-        MatButtonModule
+        MatButtonModule,
+        MatProgressBarModule
     ],
     declarations: [ PicsUploadComponent ],
     exports: [ PicsUploadComponent ],

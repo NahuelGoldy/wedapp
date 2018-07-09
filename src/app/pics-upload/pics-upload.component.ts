@@ -11,17 +11,29 @@ import { Picture } from '../shared/domain/picture';
 })
 export class PicsUploadComponent implements OnInit {
 
-  selectedFile: File = null;
-  selectedFiles: File[] = [];
+  selectedFile: any = null;
+  selectedFiles: any[] = [];
 
   constructor(private apiService: APIService) { }
 
   ngOnInit() {
   }
 
-  onFileSelected(event) {
-    this.selectedFile = <File> event.target.files[0];
-    this.selectedFiles.push(<File> event.target.files[0]);
+  onFileSelected(event: any) {
+    console.log(event.target.files);
+    Array.from(event.target.files).forEach((file: any) => {
+      this.selectedFile = file;
+      this.selectedFile.path = event.target.value;
+      this.selectedFiles.push(this.selectedFile);
+
+      const reader = new FileReader();
+
+      reader.readAsDataURL(file);
+
+      reader.onload = (e: any) => {
+        file.path = e.target.result;
+      };
+    });
   }
 
   onUpload() {
