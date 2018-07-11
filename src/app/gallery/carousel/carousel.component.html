@@ -7,7 +7,7 @@
                   {{likeBtnText}}
               </button>
               <mat-icon matBadge="{{pic.likesCount}}" matBadgeColor="warn" matBadgeOverlap="false">favorite</mat-icon>
-              <p>{{pic.createdAt | timeAgo}}</p>
+              <p>{{pic.createdAt | myTimeAgo}}</p>
           </div>
           <div class="col-md-12">
               <img src="{{serverURL + pic.path}}">
