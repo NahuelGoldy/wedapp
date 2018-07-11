@@ -85,9 +85,22 @@
 }
 
 .custom-dialog-container .mat-dialog-container {
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
     padding: 1% !important;
     background-color: transparent !important;
     //border-radius: 3% !important;
+}
+
+.mat-dialog-content img {
+    margin: 0 !important;
+    max-height: 80vh !important;
+}
+
+.carousel-inner .carousel-item img {
+    width: auto !important;
+    max-height: 60vh !important;
+    max-width: 90vw !important;
 }
 
 .custom-cdk-overlay-dark-backdrop {
