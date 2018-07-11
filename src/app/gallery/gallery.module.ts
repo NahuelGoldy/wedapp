@@ -11,6 +11,7 @@ import {
 } from '@angular/material';
 import { CarouselComponent } from './carousel/carousel.component';
 import {TimeAgoPipe} from 'time-ago-pipe';
+import {MyTimeAgoPipe} from '../shared/pipes/time-ago.pipe';
 
 @NgModule({
     imports: [
@@ -30,7 +31,7 @@ import {TimeAgoPipe} from 'time-ago-pipe';
     declarations: [
         GalleryComponent,
         CarouselComponent,
-        TimeAgoPipe
+        MyTimeAgoPipe
     ],
     exports: [GalleryComponent],
     providers: []
