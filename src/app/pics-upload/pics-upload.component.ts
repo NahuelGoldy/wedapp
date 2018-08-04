@@ -14,15 +14,16 @@ export class PicsUploadComponent implements OnInit {
   selectedFile: any = null;
   selectedFiles: any[] = [];
 
-  constructor(private apiService: APIService) { }
+  constructor(private apiService: APIService) {}
 
   ngOnInit() {
   }
 
   onFileSelected(event: any) {
-    console.log(event.target.files);
     Array.from(event.target.files).forEach((file: any) => {
       this.selectedFile = file;
+      this.selectedFile.loadProgressMode = 'determinate';
+      this.selectedFile.loadProgressValue = 0;
       this.selectedFile.path = event.target.value;
       this.selectedFiles.push(this.selectedFile);
 
@@ -36,21 +37,23 @@ export class PicsUploadComponent implements OnInit {
     });
   }
 
-  onUpload() {
+  onUpload() {;
     this.selectedFiles.forEach( each => {
+      each.loadProgressMode = 'indeterminate';
       const formdata = new FormData();
       formdata.append('image', each);
-      this.createPic(formdata);
+
+      // API call
+      this.apiService.createPic(formdata).subscribe((res:  Picture) => {
+        console.log(res);
+        each.loadProgressMode = 'determinate';
+        each.loadProgressValue = 100;
+      });
     });
-    // const fd = new FormData();
-    // fd.append('image', this.selectedFile);
-    // this.createPic(fd);
   }
 
-  public createPic(fd) {
-    this.apiService.createPic(fd).subscribe((res:  Picture) => {
-      console.log(res);
-    });
+  removePic(index) {
+    this.selectedFiles.splice(index, 1);
   }
 
 }

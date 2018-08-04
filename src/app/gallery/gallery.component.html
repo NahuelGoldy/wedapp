@@ -19,7 +19,7 @@
 
             <mat-grid-tile *ngFor="let pic of pics">
                 <a (click)="openDialog(pic)">
-                    <img mat-card-image src="{{serverURL + pic.path}}">
+                    <img mat-card-image src="{{pic.path}}">
                 </a>
             </mat-grid-tile>
 
