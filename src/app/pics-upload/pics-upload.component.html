@@ -32,7 +32,7 @@
     <button type="button" class="btn btn-danger btn-round" (click)="cameraFileInput.click()" style="margin-left: 3vw;"><i class="fa fa-camera"></i>Cámara</button>
   </div>
 
-  <div *ngFor="let file of selectedFiles">
+  <div *ngFor="let file of selectedFiles; let i = index">
     <section>
 
       <mat-card>
@@ -42,18 +42,14 @@
         </mat-card-header>
 
         <mat-card-content style="display: flex !important;">
-          <div class="col-lg-2 col-md-2 col-sm-2">
-            <img mat-card-avatar src="{{file.path}}">
-          </div>
+          <img mat-card-avatar src="{{file.path}}">
           <div class="col-lg-10 col-md-10 col-sm-10 progress-bar-container">
             <mat-progress-bar
-                    [mode]="determinate"
-                    [value]="0">
+                    [mode]="file.loadProgressMode"
+                    [value]="file.loadProgressValue">
             </mat-progress-bar>
           </div>
-          <div class="col-lg-2 col-md-2 col-sm-2">
-            <button mat-button>X</button>
-          </div>
+          <button mat-button (click)="removePic(i)">X</button>
         </mat-card-content>
 
         <mat-card-actions>
