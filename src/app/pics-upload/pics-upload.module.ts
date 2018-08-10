@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { PicsUploadComponent } from './pics-upload.component';
-import { MatProgressBarModule } from '@angular/material';
+import {MatProgressBarModule, MatSlideToggleModule} from '@angular/material';
 
 @NgModule({
     imports: [
@@ -16,7 +16,8 @@ import { MatProgressBarModule } from '@angular/material';
         RouterModule,
         MatCardModule,
         MatButtonModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatSlideToggleModule
     ],
     declarations: [ PicsUploadComponent ],
     exports: [ PicsUploadComponent ],

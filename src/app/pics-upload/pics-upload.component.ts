@@ -26,6 +26,7 @@ export class PicsUploadComponent implements OnInit {
       this.selectedFile.loadProgressValue = 0;
       this.selectedFile.path = event.target.value;
       this.selectedFiles.push(this.selectedFile);
+      this.selectedFile.isPublic = true;
 
       const reader = new FileReader();
 
@@ -37,11 +38,12 @@ export class PicsUploadComponent implements OnInit {
     });
   }
 
-  onUpload() {;
+  onUpload() {
     this.selectedFiles.forEach( each => {
       each.loadProgressMode = 'indeterminate';
       const formdata = new FormData();
       formdata.append('image', each);
+      formdata.append('isPublic', each.isPublic);
 
       // API call
       this.apiService.createPic(formdata).subscribe((res:  Picture) => {
