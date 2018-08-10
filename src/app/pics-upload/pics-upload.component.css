@@ -28,3 +28,8 @@ button {
 .mat-card-avatar {
     border-radius: 0 !important;
 }
+
+.custom-row {
+    display: flex;
+    margin-left: 20vw;
+}

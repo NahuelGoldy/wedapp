@@ -61,7 +61,14 @@
           </mat-card-content>
 
           <mat-card-actions>
-            <button mat-button>PUBLICAR</button>
+            <div class="custom-row">
+              <p>Privado </p>
+              <i class="fa fa-lock"></i>
+              <mat-slide-toggle name="isPublic" [(ngModel)]="file.isPublic"></mat-slide-toggle>
+              <i class="fa fa-unlock"></i>
+              <p> Público</p>
+            </div>
+            <!--<button mat-button>PUBLICAR</button>-->
           </mat-card-actions>
 
         </mat-card>
