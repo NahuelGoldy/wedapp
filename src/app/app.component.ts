@@ -1,30 +1,40 @@
-import { Component, OnInit, Inject, Renderer, ElementRef, ViewChild } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { Subscription } from 'rxjs/Subscription';
+import {Component, OnInit, Inject, Renderer, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
+import {Router, NavigationEnd} from '@angular/router';
+import {Subscription} from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
-import { DOCUMENT } from '@angular/platform-browser';
-import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+import {DOCUMENT} from '@angular/platform-browser';
+import {LocationStrategy, PlatformLocation, Location} from '@angular/common';
+import {NavbarComponent} from './shared/navbar/navbar.component';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements AfterViewInit {
     private _router: Subscription;
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
 
-    constructor( private renderer: Renderer, private router: Router, @Inject(DOCUMENT,) private document: any, private element: ElementRef, public location: Location) {}
-    ngOnInit() {
+    constructor(private renderer: Renderer,
+                private router: Router,
+                @Inject(DOCUMENT) private document: any,
+                private element: ElementRef,
+                public location: Location) {
+    }
+
+    ngAfterViewInit() {
         const navbar: HTMLElement = this.element.nativeElement.children[0].children[0];
         this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {
             if (window.outerWidth > 991) {
                 window.document.children[0].scrollTop = 0;
-            }else {
+            } else {
                 window.document.activeElement.scrollTop = 0;
             }
-            this.navbar.sidebarClose();
+            let titlee = this.location.prepareExternalUrl(this.location.path());
+            titlee = titlee.slice(1);
+            if (titlee !== 'home') {
+                this.navbar.sidebarClose();
+            }
         });
         const ua = window.navigator.userAgent;
         const trident = ua.indexOf('Trident/');
@@ -40,9 +50,10 @@ export class AppComponent implements OnInit {
         }
 
     }
+
     removeFooter() {
         let titlee = this.location.prepareExternalUrl(this.location.path());
-        titlee = titlee.slice( 1 );
+        titlee = titlee.slice(1);
         if (titlee === 'home') {
             return false;
         } else {
