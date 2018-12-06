@@ -24,6 +24,7 @@
     "@angular/router": "^6.0.3",
     "@ng-bootstrap/ng-bootstrap": "^2.2.0",
     "@types/googlemaps": "^3.30.10",
+    "angular-vertical-timeline": "^0.6.0",
     "bootstrap": "^4.1.1",
     "core-js": "^2.4.1",
     "jquery": "^3.2.1",
