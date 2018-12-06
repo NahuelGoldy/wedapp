@@ -11,6 +11,9 @@ export class InformationComponent implements OnInit {
   @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
   partyDate: Date;
+  weMetDate: Date;
+  weMovedTogetherDate: Date;
+  proposalDate: Date;
   secondsLeft: number;
   minutesLeft: number;
   hoursLeft: number;
@@ -19,6 +22,9 @@ export class InformationComponent implements OnInit {
 
   constructor() {
     this.partyDate = new Date('2019-04-06T21:00:00-0300');
+    this.weMetDate = new Date('2009-12-30T22:00:00-0300');
+    this.proposalDate = new Date('2018-02-07T14:00:00-0300');
+    this.weMovedTogetherDate = new Date('2011-03-15T16:00:00-0300');
   }
 
   ngOnInit() {

@@ -16,6 +16,7 @@ import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
 import { InformationComponent } from './information/information.component';
+import {VerticalTimelineModule} from 'angular-vertical-timeline';
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import { InformationComponent } from './information/information.component';
         NouisliderModule,
         JWBootstrapSwitchModule,
         MatCardModule,
-        MatButtonModule
+        MatButtonModule,
+        VerticalTimelineModule
     ],
     declarations: [
         ComponentsComponent,
