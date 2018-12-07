@@ -21,7 +21,7 @@ mat-card-content .row div p {
 }
 
 :host ::ng-deep .timeline-content {
-    background: #f4f4f4 !important;
+    background: #fff !important;
     .inner-content {
         margin-right: 0 !important;
     }
@@ -33,6 +33,10 @@ mat-card-content .row div p {
         font-weight: 500 !important;
         height: 15% !important;
     }
+}
+
+:host ::ng-deep .timeline::before {
+    background: rgba(222, 3, 127, 0.4);
 }
 
 .big-heading {
@@ -62,6 +66,6 @@ img {
     border-style: none;
 }
 
-vertical-timeline-card h3 {
+vertical-timeline-card h2, vertical-timeline-card h3 {
     font-family: 'Dancing Script', cursive;
 }
