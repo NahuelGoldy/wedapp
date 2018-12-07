@@ -28,7 +28,6 @@ export class InformationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.setClock();
     const mapProp = {
       center: new google.maps.LatLng(-31.9725349, -60.9227361),
       zoom: 15,
@@ -40,29 +39,6 @@ export class InformationComponent implements OnInit {
       position: new google.maps.LatLng(-31.9725349, -60.9227361),
       map: this.map
     });
-  }
-
-  setClock() {
-    this.timer = setInterval( () => {
-      this.getTimeRemaining(this.partyDate);
-    }, 1000);
-  }
-
-  getTimeRemaining(endtime) {
-    const now = Date.now();
-    const distance = endtime - now;
-    if (distance > 0) {
-      this.secondsLeft = Math.floor((distance / 1000) % 60 );
-      this.minutesLeft = Math.floor((distance / 1000 / 60) % 60 );
-      this.hoursLeft = Math.floor((distance / (1000 * 60 * 60)) % 24 );
-      this.daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
-    } else {
-      clearInterval(this.timer);
-      this.secondsLeft = 0;
-      this.minutesLeft = 0;
-      this.hoursLeft = 0;
-      this.daysLeft = 0;
-    }
   }
 
 }
