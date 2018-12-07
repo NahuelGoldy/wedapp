@@ -51,4 +51,10 @@ export class HomeComponent implements OnInit {
             this.daysLeft = 0;
         }
     }
+
+    scrollTo(className: string): void {
+        const elementList = document.querySelectorAll('.' + className);
+        const element = elementList[0] as HTMLElement;
+        element.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    }
 }

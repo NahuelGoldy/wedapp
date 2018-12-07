@@ -4,7 +4,7 @@ import { } from '@types/googlemaps';
 @Component({
   selector: 'app-information',
   templateUrl: './information.component.html',
-  styleUrls: ['./information.component.css']
+  styleUrls: ['./information.component.scss']
 })
 export class InformationComponent implements OnInit {
 
@@ -14,11 +14,6 @@ export class InformationComponent implements OnInit {
   weMetDate: Date;
   weMovedTogetherDate: Date;
   proposalDate: Date;
-  secondsLeft: number;
-  minutesLeft: number;
-  hoursLeft: number;
-  daysLeft: number;
-  timer;
 
   constructor() {
     this.partyDate = new Date('2019-04-06T21:00:00-0300');

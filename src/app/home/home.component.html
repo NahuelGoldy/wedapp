@@ -1,43 +1,36 @@
 <div class="wrapper" [@routerTransition]>
     <div class="page-header section-dark" style="background-image: url('assets/img/wed4.jpg')">
         <div class="filter"></div>
+        <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
         <div class="content-center">
             <div class="container">
                 <div class="title-brand">
-                    <h1 class="presentation-title">Gise & Nahuel</h1>
-                    <!--COUNTDOWN - OPCION #1 -->
-                    <!--<div id="clockdiv">-->
-                        <!--<div>-->
-                            <!--<span class="days">{{daysLeft}}</span>-->
-                            <!--<div class="smalltext">Days</div>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<span class="hours">{{hoursLeft}}</span>-->
-                            <!--<div class="smalltext">Hours</div>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<span class="minutes">{{minutesLeft}}</span>-->
-                            <!--<div class="smalltext">Minutes</div>-->
-                        <!--</div>-->
-                        <!--<div>-->
-                            <!--<span class="seconds">{{secondsLeft}}</span>-->
-                            <!--<div class="smalltext">Seconds</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-                    <!--COUNTDOWN - OPCION #2 -->
+                    <div class="title-front" style=""><span class="char1" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(-3px) translateY(84px) rotate(-48deg);">W</span><span class="char2" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(-7px) translateY(65px) rotate(-42deg);">e</span><span class="char3 empty" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(-9px) translateY(55px) rotate(-38deg);">&nbsp;</span><span class="char4" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(-10px) translateY(46px) rotate(-35deg);">a</span><span class="char5" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(-11px) translateY(33px) rotate(-29deg);">r</span><span class="char6" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(-10px) translateY(23px) rotate(-24deg);">e</span><span class="char7 empty" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(-10px) translateY(17px) rotate(-21deg);">&nbsp;</span><span class="char8" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(-8px) translateY(11px) rotate(-17deg);">g</span><span class="char9" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(-6px) translateY(5px) rotate(-12deg);">e</span><span class="char10" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(-4px) translateY(2px) rotate(-7deg);">t</span><span class="char11" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(-1px) translateY(0px) rotate(-2deg);">t</span><span class="char12" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(0px) translateY(0px) rotate(1deg);">i</span><span class="char13" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(3px) translateY(1px) rotate(5deg);">n</span><span class="char14" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(6px) translateY(5px) rotate(11deg);">g</span><span class="char15 empty" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(7px) translateY(8px) rotate(15deg);">&nbsp;</span><span class="char16" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(9px) translateY(14px) rotate(19deg);">m</span><span class="char17" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(10px) translateY(24px) rotate(25deg);">a</span><span class="char18" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(11px) translateY(35px) rotate(30deg);">r</span><span class="char19" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(10px) translateY(48px) rotate(36deg);">r</span><span class="char20" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(9px) translateY(59px) rotate(40deg);">i</span><span class="char21" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(6px) translateY(71px) rotate(44deg);">e</span><span class="char22" style="display: inline-block; transition: none 0s ease 0s; transform: translateX(2px) translateY(87px) rotate(49deg);">d</span></div>
+                    <div class="logo">
+                        <img src="assets/img/logo.png">
+                    </div>
+                    <h1 class="main-title">Gise <span class="custom-color">&</span> Nahuel</h1>
+                    <div class="title-date">
+                        <span class="swirl-left"><span class="swirl-right">06<span class="custom-color">.</span>04<span class="custom-color">.</span>2019</span></span>
+                    </div>
+                    <!--<div class="slider-img-holder"></div>-->
                     <div id="countdown">
                         <div class="countdown-item days">{{daysLeft}}<div class="smalltext">dias</div></div>
                         <div class="countdown-item hours">{{hoursLeft}}<div class="smalltext">horas</div></div>
                         <div class="countdown-item minutes">{{minutesLeft}}<div class="smalltext">minutos</div></div>
                         <div class="countdown-item seconds">{{secondsLeft}}<div class="smalltext">segundos</div></div>
                     </div>
+
+                    <div class="slider-scroll">
+                        <a (click)="scrollTo('infosection')">
+                            <i class="fa fa-angle-down fade-down"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); "></div>
     </div>
-    <div class="main">
+    <div class="main infosection">
         <app-components></app-components>
         <div class="section section-dark section-nucleo-icons">
             <div class="container">
