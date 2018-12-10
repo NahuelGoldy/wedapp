@@ -26,6 +26,7 @@
               },
               "node_modules/angular-vertical-timeline/dist/vertical-timeline.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/aos/dist/aos.css",
               "src/assets/sass/paper-kit.scss",
               "src/assets/css/demo.css",
               "src/assets/css/nucleo-icons.css"

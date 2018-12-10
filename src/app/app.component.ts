@@ -5,13 +5,14 @@ import 'rxjs/add/operator/filter';
 import {DOCUMENT} from '@angular/platform-browser';
 import {LocationStrategy, PlatformLocation, Location} from '@angular/common';
 import {NavbarComponent} from './shared/navbar/navbar.component';
+import * as AOS from 'aos';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
     private _router: Subscription;
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
 
@@ -20,6 +21,10 @@ export class AppComponent implements AfterViewInit {
                 @Inject(DOCUMENT) private document: any,
                 private element: ElementRef,
                 public location: Location) {
+    }
+
+    ngOnInit() {
+        AOS.init();
     }
 
     ngAfterViewInit() {
