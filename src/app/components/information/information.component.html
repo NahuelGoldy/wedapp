@@ -5,7 +5,7 @@
             <!--<mat-card-title>About us</mat-card-title>-->
         <!--</mat-card-header>-->
         <mat-card-content>
-            <h2 class="big-heading">About <span class="custom-color">Us</span></h2>
+            <h2 class="big-heading">Quienes <span class="custom-color">Somos</span></h2>
             <img class="headline_1" src="../assets/img/headline_simple.svg" alt="">
             <div class="row">
                 <div class="col-xs-6  col-sm-6 col-md-3 offset-md-2">
@@ -41,39 +41,52 @@
 </section>
 
 <section>
-    <h2 class="big-heading"><span class="custom-color">Nuestra </span>Historia</h2>
+    <h2 class="big-heading">Nuestra <span class="custom-color"> Historia</span></h2>
     <img class="headline_1" src="../assets/img/headline_simple.svg" alt="">
     <vertical-timeline>
         <vertical-timeline-card [dateValue]="weMetDate">
             <h2 class="text-center"><strong>Nos conocimos</strong></h2>
-            <img mat-card-image src="https://cdn10.phillymag.com/wp-content/uploads/sites/3/2017/08/minimalist-modern-JG-Domestic-city-Wedding-Philadelphia-11.jpg">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <mat-chip-list>
+                <mat-chip color="accent" selected>{{weMetDate.toLocaleTimeString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }).slice(0, -9)}}</mat-chip>
+            </mat-chip-list>
+            <p>
+                Gise y Nahuel se conocieron en Diciembre de 2009, y se pusieron oficialmente de novios el 30 de Diciembre.
             </p>
+            <img mat-card-image src="../assets/img/timeline1.jpg">
         </vertical-timeline-card>
 
         <vertical-timeline-card [dateValue]="weMovedTogetherDate">
             <h2 class="text-center"><strong>Nos mudamos juntos</strong></h2>
-            <img mat-card-image src="https://cdn10.phillymag.com/wp-content/uploads/sites/3/2017/08/minimalist-modern-JG-Domestic-city-Wedding-Philadelphia-11.jpg">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <mat-chip-list>
+                <mat-chip color="accent" selected>{{weMovedTogetherDate.toLocaleTimeString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }).slice(0, -9)}}</mat-chip>
+            </mat-chip-list>
+            <p>
+                Poco después de cumplir el año de relación, se mudaron juntos a su pequeño pero ansiado hogar.
             </p>
+            <img mat-card-image src="../assets/img/timeline2.jpg">
         </vertical-timeline-card>
 
         <vertical-timeline-card [dateValue]="proposalDate">
             <h2 class="text-center"><strong>La propuesta</strong></h2>
-            <img mat-card-image src="../assets/img/wedding-icon.png">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <mat-chip-list>
+                <mat-chip color="accent" selected>{{proposalDate.toLocaleTimeString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }).slice(0, -9)}}</mat-chip>
+            </mat-chip-list>
+            <p>
+                Después de más de 8 años de noviazgo, Nahuel le propuso Matrimonio a Gise a los pies de la torre Eiffel, y bajo la nieve.
             </p>
+            <img mat-card-image src="../assets/img/timeline3.jpg">
         </vertical-timeline-card>
 
         <vertical-timeline-card [dateValue]="partyDate">
             <h2 class="text-center"><strong>La boda</strong></h2>
-            <img mat-card-image src="https://cdn10.phillymag.com/wp-content/uploads/sites/3/2017/08/minimalist-modern-JG-Domestic-city-Wedding-Philadelphia-11.jpg">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <mat-chip-list>
+                <mat-chip color="accent" selected>{{partyDate.toLocaleTimeString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }).slice(0, -9)}}</mat-chip>
+            </mat-chip-list>
+            <p>
+                Finalmente, casi 10 años después de conocerse, van a dar el sí (y no es broma).
+                Si estás leyendo esto, has sido invitado/a y esperan que seas parte de la celebración!
             </p>
+            <img mat-card-image src="../assets/img/timeline4-1.jpg">
         </vertical-timeline-card>
     </vertical-timeline>
 </section>
