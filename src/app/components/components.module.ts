@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { NouisliderModule } from 'ng2-nouislider';
-import { JWBootstrapSwitchModule } from 'jw-bootstrap-switch-ng2';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
@@ -20,7 +19,6 @@ import { VerticalTimelineModule } from 'angular-vertical-timeline';
         FormsModule,
         NgbModule,
         NouisliderModule,
-        JWBootstrapSwitchModule,
         MatCardModule,
         MatButtonModule,
         MatChipsModule,
