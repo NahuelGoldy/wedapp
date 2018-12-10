@@ -8,10 +8,10 @@ import { HostListener} from '@angular/core';
     styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-    private toggleButton: any;
-    private navbarCollapse: any;
-    private sidebarVisible: boolean;
-    private isNavbarDark: boolean;
+     toggleButton: any;
+     navbarCollapse: any;
+     sidebarVisible: boolean;
+     isNavbarDark: boolean;
 
     constructor(public location: Location, private element: ElementRef) {
         this.sidebarVisible = false;
