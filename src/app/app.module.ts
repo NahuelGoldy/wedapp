@@ -16,7 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GalleryModule } from './gallery/gallery.module';
 import { WallModule } from './wall/wall.module';
 import { PicsUploadModule } from './pics-upload/pics-upload.module';
-import {CarouselComponent} from './gallery/carousel/carousel.component';
+import { CarouselComponent } from './gallery/carousel/carousel.component';
 
 @NgModule({
   declarations: [

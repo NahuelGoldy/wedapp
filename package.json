@@ -26,6 +26,7 @@
     "@types/googlemaps": "^3.30.10",
     "angular-cli-ghpages": "^0.5.3",
     "angular-vertical-timeline": "^0.6.0",
+    "aos": "^2.3.4",
     "bootstrap": "^4.1.1",
     "core-js": "^2.4.1",
     "jquery": "^3.2.1",
