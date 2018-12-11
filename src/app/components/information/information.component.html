@@ -47,7 +47,7 @@
         <vertical-timeline-card [dateValue]="weMetDate">
             <h2 class="text-center"><strong>Nos conocimos</strong></h2>
             <mat-chip-list>
-                <mat-chip color="accent" selected>{{weMetDate.toLocaleTimeString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }).slice(0, -9)}}</mat-chip>
+                <mat-chip color="accent" selected>{{weMetDate | myLocaleDatePipe}}</mat-chip>
             </mat-chip-list>
             <p>
                 Gise y Nahuel se conocieron en Diciembre de 2009, y se pusieron oficialmente de novios el 30 de Diciembre.
@@ -58,7 +58,7 @@
         <vertical-timeline-card [dateValue]="weMovedTogetherDate">
             <h2 class="text-center"><strong>Nos mudamos juntos</strong></h2>
             <mat-chip-list>
-                <mat-chip color="accent" selected>{{weMovedTogetherDate.toLocaleTimeString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }).slice(0, -9)}}</mat-chip>
+                <mat-chip color="accent" selected>{{weMovedTogetherDate | myLocaleDatePipe}}</mat-chip>
             </mat-chip-list>
             <p>
                 Poco después de cumplir el año de relación, se mudaron juntos a su pequeño pero ansiado hogar.
@@ -69,7 +69,7 @@
         <vertical-timeline-card [dateValue]="proposalDate">
             <h2 class="text-center"><strong>La propuesta</strong></h2>
             <mat-chip-list>
-                <mat-chip color="accent" selected>{{proposalDate.toLocaleTimeString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }).slice(0, -9)}}</mat-chip>
+                <mat-chip color="accent" selected>{{proposalDate | myLocaleDatePipe}}</mat-chip>
             </mat-chip-list>
             <p>
                 Después de más de 8 años de noviazgo, Nahuel le propuso Matrimonio a Gise a los pies de la torre Eiffel, y bajo la nieve.
@@ -80,7 +80,7 @@
         <vertical-timeline-card [dateValue]="partyDate">
             <h2 class="text-center"><strong>La boda</strong></h2>
             <mat-chip-list>
-                <mat-chip color="accent" selected>{{partyDate.toLocaleTimeString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' }).slice(0, -9)}}</mat-chip>
+                <mat-chip color="accent" selected>{{partyDate | myLocaleDatePipe}}</mat-chip>
             </mat-chip-list>
             <p>
                 Finalmente, casi 10 años después de conocerse, van a dar el sí (y no es broma).
@@ -122,7 +122,7 @@
         <!-- Portfolio Images -->
         <div class="row grid">
             <div class="grid-item popup-gallery col-lg-3 col-md-6 col-sm-12">
-                <div class="item" data-aos="slide-left" data-aos-offset="200" data-aos-duration="1500" data-aos-easing="ease-in-out">
+                <div class="item" data-aos="flip-right" data-aos-offset="200" data-aos-duration="1500" data-aos-easing="ease-in-out">
                     <img class="img-fluid" src="assets/img/album/album1.jpg" alt="">
                 </div>
             </div>

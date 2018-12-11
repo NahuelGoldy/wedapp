@@ -12,6 +12,7 @@ import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
 import { InformationComponent } from './information/information.component';
 import { VerticalTimelineModule } from 'angular-vertical-timeline';
+import { MyLocaleDatePipe } from '../shared/pipes/locale-date.pipe';
 
 @NgModule({
     imports: [
@@ -28,7 +29,8 @@ import { VerticalTimelineModule } from 'angular-vertical-timeline';
         ComponentsComponent,
         NgbdModalComponent,
         NgbdModalContent,
-        InformationComponent
+        InformationComponent,
+        MyLocaleDatePipe
     ],
     entryComponents: [NgbdModalContent],
     exports: [ ComponentsComponent ]
