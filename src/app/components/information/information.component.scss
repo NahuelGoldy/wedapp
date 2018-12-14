@@ -37,11 +37,23 @@ mat-card-content .row div p {
     }
 }
 
-:host ::ng-deep .timeline-img{
+:host ::ng-deep .timeline-img {
     background: #de037f !important;
     p {
         font-weight: 500 !important;
         height: 15% !important;
+    }
+    @media screen and (max-width: 480px)
+    {
+        left: 2rem !important;
+    }
+    @media screen and (min-width: 481px) and (max-width: 650px)
+    {
+        left: 1.3rem !important;
+    }
+    @media screen and (min-width: 651px) and (max-width: 1024px)
+    {
+        left: 0.65rem !important;
     }
 }
 
