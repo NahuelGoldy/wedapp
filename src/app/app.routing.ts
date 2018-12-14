@@ -10,19 +10,19 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { PicsUploadComponent } from './pics-upload/pics-upload.component';
 
 const routes: Routes = [
-    { path: '',         component: LandingComponent },
+    { path: '',             component: LandingComponent },
     { path: 'home',         component: HomeComponent },
     { path: 'wall',         component: WallComponent },
     { path: 'gallery',      component: GalleryComponent },
     { path: 'upload',       component: PicsUploadComponent },
-    { path: '**',           redirectTo: '', pathMatch: 'full' }
+    { path: '**',           redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {useHash: true})
   ],
   exports: [
   ],
