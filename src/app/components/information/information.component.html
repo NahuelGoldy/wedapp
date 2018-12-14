@@ -44,50 +44,58 @@
     <h2 class="big-heading">Nuestra <span class="custom-color"> Historia</span></h2>
     <img class="headline_1" src="assets/img/headline_simple.svg" alt="">
     <vertical-timeline>
-        <vertical-timeline-card [dateValue]="weMetDate">
-            <h2 class="text-center"><strong>Nos conocimos</strong></h2>
-            <mat-chip-list>
-                <mat-chip color="accent" selected>{{weMetDate | myLocaleDatePipe}}</mat-chip>
-            </mat-chip-list>
-            <p>
-                Gise y Nahuel se conocieron en Diciembre de 2009, y se pusieron oficialmente de novios el 30 de Diciembre.
-            </p>
-            <img mat-card-image src="assets/img/timeline1.jpg">
-        </vertical-timeline-card>
+        <div data-aos="fade-up" data-aos-offset="400" data-aos-duration="900" data-aos-easing="ease-in-out-cubic">
+            <vertical-timeline-card [dateValue]="weMetDate">
+                <h2 class="text-center"><strong>Nos conocimos</strong></h2>
+                <mat-chip-list>
+                    <mat-chip color="accent" selected>{{weMetDate | myLocaleDatePipe}}</mat-chip>
+                </mat-chip-list>
+                <p>
+                    Gise y Nahuel se conocieron en Diciembre de 2009, y se pusieron oficialmente de novios el 30 de Diciembre.
+                </p>
+                <img mat-card-image src="assets/img/timeline1.jpg">
+            </vertical-timeline-card>
+        </div>
 
-        <vertical-timeline-card [dateValue]="weMovedTogetherDate">
-            <h2 class="text-center"><strong>Nos mudamos juntos</strong></h2>
-            <mat-chip-list>
-                <mat-chip color="accent" selected>{{weMovedTogetherDate | myLocaleDatePipe}}</mat-chip>
-            </mat-chip-list>
-            <p>
-                Poco después de cumplir el año de relación, se mudaron juntos a su pequeño pero ansiado hogar.
-            </p>
-            <img mat-card-image src="assets/img/timeline2.jpg">
-        </vertical-timeline-card>
+        <div data-aos="fade-up" data-aos-offset="400" data-aos-duration="900" data-aos-easing="ease-in-out-cubic">
+            <vertical-timeline-card [dateValue]="weMovedTogetherDate">
+                <h2 class="text-center"><strong>Nos mudamos juntos</strong></h2>
+                <mat-chip-list>
+                    <mat-chip color="accent" selected>{{weMovedTogetherDate | myLocaleDatePipe}}</mat-chip>
+                </mat-chip-list>
+                <p>
+                    Poco después de cumplir el año de relación, se mudaron juntos a su pequeño pero ansiado hogar.
+                </p>
+                <img mat-card-image src="assets/img/timeline2.jpg">
+            </vertical-timeline-card>
+        </div>
 
-        <vertical-timeline-card [dateValue]="proposalDate">
-            <h2 class="text-center"><strong>La propuesta</strong></h2>
-            <mat-chip-list>
-                <mat-chip color="accent" selected>{{proposalDate | myLocaleDatePipe}}</mat-chip>
-            </mat-chip-list>
-            <p>
-                Después de más de 8 años de noviazgo, Nahuel le propuso Matrimonio a Gise a los pies de la torre Eiffel, y bajo la nieve.
-            </p>
-            <img mat-card-image src="assets/img/timeline3.jpg">
-        </vertical-timeline-card>
+        <div data-aos="fade-up" data-aos-offset="400" data-aos-duration="900" data-aos-easing="ease-in-out-cubic">
+            <vertical-timeline-card [dateValue]="proposalDate">
+                <h2 class="text-center"><strong>La propuesta</strong></h2>
+                <mat-chip-list>
+                    <mat-chip color="accent" selected>{{proposalDate | myLocaleDatePipe}}</mat-chip>
+                </mat-chip-list>
+                <p>
+                    Después de más de 8 años de noviazgo, Nahuel le propuso Matrimonio a Gise a los pies de la torre Eiffel, y bajo la nieve.
+                </p>
+                <img mat-card-image src="assets/img/timeline3.jpg">
+            </vertical-timeline-card>
+        </div>
 
-        <vertical-timeline-card [dateValue]="partyDate">
-            <h2 class="text-center"><strong>La boda</strong></h2>
-            <mat-chip-list>
-                <mat-chip color="accent" selected>{{partyDate | myLocaleDatePipe}}</mat-chip>
-            </mat-chip-list>
-            <p>
-                Finalmente, casi 10 años después de conocerse, van a dar el sí (y no es broma).
-                Si estás leyendo esto, has sido invitado/a y esperan que seas parte de la celebración!
-            </p>
-            <img mat-card-image src="assets/img/timeline4-1.jpg">
-        </vertical-timeline-card>
+        <div data-aos="fade-up" data-aos-offset="400" data-aos-duration="900" data-aos-easing="ease-in-out-cubic">
+            <vertical-timeline-card [dateValue]="partyDate">
+                <h2 class="text-center"><strong>La boda</strong></h2>
+                <mat-chip-list>
+                    <mat-chip color="accent" selected>{{partyDate | myLocaleDatePipe}}</mat-chip>
+                </mat-chip-list>
+                <p>
+                    Finalmente, casi 10 años después de conocerse, van a dar el sí (y no es broma).
+                    Si estás leyendo esto, has sido invitado/a y esperan que seas parte de la celebración!
+                </p>
+                <img mat-card-image src="assets/img/timeline4-1.jpg">
+            </vertical-timeline-card>
+        </div>
     </vertical-timeline>
 </section>
 
@@ -105,7 +113,7 @@
             <img class="headline_1" src="assets/img/headline_simple.svg" alt="">
             <h6 class="text-center">Dónde: </h6> <p class="text-center">Mutual Central Coronda, Salon Dorado.</p>
             <h6 class="text-center">Dirección: </h6> <p class="text-center">25 de Mayo 1650, Coronda, SF, Argentina.</p>
-            <div #gmap style="width:100%;height:400px;" data-aos="zoom-in" data-aos-offset="400" data-aos-easing="ease-in-out">
+            <div #gmap style="width:100%;height:400px;" data-aos="zoom-in" data-aos-offset="400" data-aos-duration="900" data-aos-easing="ease-in-out">
             </div>
         </mat-card-content>
         <mat-card-actions>
