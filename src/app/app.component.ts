@@ -59,7 +59,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     removeFooter() {
         let titlee = this.location.prepareExternalUrl(this.location.path());
         titlee = titlee.slice(1);
-        if (titlee === 'home') {
+        if (titlee === '') {
             return false;
         } else {
             return true;
