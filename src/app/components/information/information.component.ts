@@ -35,5 +35,4 @@ export class InformationComponent implements OnInit {
             map: this.map
         });
     }
-
 }
