@@ -8,8 +8,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 
 import { ComponentsComponent } from './components.component';
-import { NgbdModalComponent } from './modal/modal.component';
-import { NgbdModalContent } from './modal/modal.component';
 import { InformationComponent } from './information/information.component';
 import { VerticalTimelineModule } from 'angular-vertical-timeline';
 import { MyLocaleDatePipe } from '../shared/pipes/locale-date.pipe';
@@ -27,12 +25,10 @@ import { MyLocaleDatePipe } from '../shared/pipes/locale-date.pipe';
     ],
     declarations: [
         ComponentsComponent,
-        NgbdModalComponent,
-        NgbdModalContent,
         InformationComponent,
         MyLocaleDatePipe
     ],
-    entryComponents: [NgbdModalContent],
+    entryComponents: [],
     exports: [ ComponentsComponent ]
 })
 export class ComponentsModule { }
