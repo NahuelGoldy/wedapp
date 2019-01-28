@@ -10,6 +10,8 @@ export class InformationComponent implements OnInit {
 
     @ViewChild('gmap') gmapElement: any;
     map: google.maps.Map;
+    @ViewChild('gmap2') gmapElement2: any;
+    map2: google.maps.Map;
     partyDate: Date;
     weMetDate: Date;
     weMovedTogetherDate: Date;
@@ -23,6 +25,20 @@ export class InformationComponent implements OnInit {
     }
 
     ngOnInit() {
+        // mapa ceremonia
+        const mapProp2 = {
+            center: new google.maps.LatLng(-31.975014, -60.915852),
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        this.map2 = new google.maps.Map(this.gmapElement2.nativeElement, mapProp2);
+
+        new google.maps.Marker({
+            position: new google.maps.LatLng(-31.975014, -60.915852),
+            map: this.map2
+        });
+
+        // mapa Fiesta
         const mapProp = {
             center: new google.maps.LatLng(-31.9725349, -60.9227361),
             zoom: 15,
