@@ -6,6 +6,7 @@ import { NouisliderModule } from 'ng2-nouislider';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatStepperModule } from '@angular/material/stepper';
 
 import { ComponentsComponent } from './components.component';
 import { InformationComponent } from './information/information.component';
@@ -21,6 +22,7 @@ import { MyLocaleDatePipe } from '../shared/pipes/locale-date.pipe';
         MatCardModule,
         MatButtonModule,
         MatChipsModule,
+        MatStepperModule,
         VerticalTimelineModule
     ],
     declarations: [

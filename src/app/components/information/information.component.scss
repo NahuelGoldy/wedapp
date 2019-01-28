@@ -174,3 +174,10 @@ mat-chip-list mat-chip {
     font-size: 1.75rem;
     font-weight: 400;
 }
+
+:host ::ng-deep .mat-step-label {
+    font-family: 'Montserrat', serif !important;
+    font-size: 1.3rem !important;
+    font-weight: 400 !important;
+    text-decoration: underline !important;
+}

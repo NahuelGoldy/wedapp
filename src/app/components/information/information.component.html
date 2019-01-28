@@ -97,10 +97,32 @@
         <mat-card-content>
             <h2 class="big-heading">El <span class="custom-color">Lugar</span></h2>
             <img class="headline_1" src="assets/img/headline_simple.svg" alt="">
-            <h6 class="text-center">Dónde: </h6> <p class="text-center">Mutual Central Coronda, Salon Dorado.</p>
-            <h6 class="text-center">Dirección: </h6> <p class="text-center">25 de Mayo 1650, Coronda, SF, Argentina.</p>
-            <div #gmap style="width:100%;height:400px;" data-aos="zoom-in" data-aos-offset="400" data-aos-duration="900" data-aos-easing="ease-in-out">
-            </div>
+            <mat-vertical-stepper [linear]="false" #stepper>
+                <mat-step>
+                    <ng-template matStepLabel>LA CEREMONIA</ng-template>
+                    <h6 class="text-center">Dónde: </h6>
+                    <p class="text-center">Parroquia San Jerónimo.</p>
+                    <h6 class="text-center">Dirección: </h6>
+                    <p class="text-center">San Jerónimo 1129, Coronda, SF, Argentina.</p>
+                    <h6 class="text-center">Cuándo: </h6>
+                    <p class="text-center">06/04/2019, 21:00hs.</p>
+                    <div #gmap2 style="width:100%;height:400px;" data-aos="zoom-in" data-aos-offset="400" data-aos-duration="900"
+                        data-aos-easing="ease-in-out">
+                    </div>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>LA FIESTA</ng-template>
+                    <h6 class="text-center">Dónde: </h6>
+                    <p class="text-center">Mutual Central Coronda, Salon Dorado.</p>
+                    <h6 class="text-center">Dirección: </h6>
+                    <p class="text-center">25 de Mayo 1650, Coronda, SF, Argentina.</p>
+                    <h6 class="text-center">Cuándo: </h6>
+                    <p class="text-center">06/04/2019, 21:30hs.</p>
+                    <div #gmap style="width:100%;height:400px;" data-aos="zoom-in" data-aos-offset="400" data-aos-duration="900"
+                        data-aos-easing="ease-in-out">
+                    </div>
+                </mat-step>
+            </mat-vertical-stepper>
         </mat-card-content>
         <!--<mat-card-actions>-->
             <!--<button mat-button>SHARE</button>-->
